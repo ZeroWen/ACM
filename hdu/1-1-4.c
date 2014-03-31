@@ -35,11 +35,11 @@
 
 #include<stdio.h>
 int main(){
-	int i,a,b,N;
-	while(scanf("%d",&N),N){
-		for(i=0,b=0;i<N;i++,b+=a)
+	int i,a,s,n;
+	while(scanf("%d",&n),n){
+		for(i=0,s=0;i<n;i++,s+=a)
 			scanf("%d",&a);
-		printf("%d\n",b);
+		printf("%d\n",s);
 	}
 	return 0;
 }
