@@ -35,9 +35,8 @@
 
 #include <stdio.h>
 int main(){
-	int n;
+	int n,i,a,b;
 	while(scanf("%d",&n)!=EOF){
-		int i,a,b;
 		for(i=0;i<n;i++){
 			scanf("%d%d",&a,&b);
 			printf("%d\n",a+b);
