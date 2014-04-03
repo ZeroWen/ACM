@@ -45,6 +45,15 @@ int main(){
 	printf("%s",str);
 	return 0;
 }
+
+/*!!!!
+ * NOTE:Remember this!
+ * Output the corresponding message in just one line.
+ * 
+ * !!ONE LINE!!
+ * /
+
+
 /*
 #include <stdio.h>
 int main(){

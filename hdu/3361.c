@@ -44,3 +44,10 @@ int main(){
 	return 0;
 }
 
+/*!!!!
+ * NOTE:Remember this!
+ * Output the corresponding message in just one line.
+ * 
+ * !!ONE LINE!!
+ * /
+
