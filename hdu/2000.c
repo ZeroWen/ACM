@@ -38,7 +38,7 @@ int main(){
 	int i,j;
 	while(scanf("%s",str)!=EOF){
 		for(i=0;i<3;i++)
-			for(j=i+1;j<2-i;j++)
+			for(j=0;j<2-i;j++)
 				if(str[j]>str[j+1]){
 					t=str[j];
 					str[j]=str[j+1];
