@@ -33,10 +33,10 @@
 int isPrime(int n){
 	int i,sign=1;
 	if(n==2)
-		return sign;
+		return 1;
 	for(i=2;i<n;i++)
 		if(n%i==0)
-			sign=0;
+			return 0;
 	return sign;
 }
 int main(){

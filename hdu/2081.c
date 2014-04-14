@@ -30,16 +30,15 @@
  */
 
 #include <stdio.h>
-#define SIZE 12
 int main(){
 	int n,i;
-	char phone[SIZE];
+	char phone[12];
 	while(scanf("%d",&n)!=EOF)
 		while(n--){
 			scanf("%s",phone);
 			putchar('6');
-			for(i=6;i<SIZE-1;i++)
-				printf("%c%s",phone[i],(i==SIZE-2)?"\n":"");
+			for(i=6;i<11;i++)
+				printf("%c%s",phone[i],(i==10)?"\n":"");
 		}
 	return 0;
 }

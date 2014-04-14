@@ -38,11 +38,9 @@ int main(){
 		getchar();
 		while(n--){
 			gets(s);
-			c=0;
-			for(i=0;i<strlen(s);i++){
+			for(i=c=0;i<strlen(s);i++)
 				if(s[i]<0)
 					c++;
-			}
 			printf("%d\n",c/2);
 		}
 	}
