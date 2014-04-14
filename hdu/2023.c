@@ -47,8 +47,8 @@ int main(){
 				t+=a[i][j];
 			aver_sub[j]=t/n;
 		}
-		for(i=flag=s=0;i<n;i++){
-			for(j=0;j<m;j++)
+		for(i=flag=0;i<n;i++){
+			for(j=s=0;j<m;j++)
 				if(a[i][j]>=aver_sub[j])//注意是大于等于
 					s++;
 			if(s==m)
@@ -68,5 +68,4 @@ int main(){
 //并且一直踢脚都没有发现
 //1.大于等于少写个等号
 //2.最后是m-1写成n-1
-//最后，HDU的online judge肯定有问题，用C写的代码选择C的编译器总是WA，但是用C++编译器就通过了
 //HDU,F**K YOU!!!
