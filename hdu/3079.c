@@ -66,12 +66,11 @@ void convert(char str[]){
 }
 int main(){
 	int n,i,j;
-	while(scanf("%d",&n)!=EOF){
+	while(scanf("%d",&n)!=EOF)
 		for(i=0;i<n;i++){
 			char str[50];
 			scanf("%s",str);
 			convert(str);
 		}
-	}
 	return 0;		
 }

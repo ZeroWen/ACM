@@ -1,30 +1,25 @@
 /*
  * =====================================================================================
  *
- *       Filename:  1-1-7.c
+ *       Filename:  2114.c
  *
  *    Description:  
  *    Problem Description
- *    Your task is to Calculate a + b.
- *
+ *    Calculate S(n).
+ *    S(n)=13+23 +33 +......+n3 .
  *    Input
- *    The input will consist of a series of pairs of integers a and b, separated by a space, one pair of integers per line. 
- *
+ *    Each line will contain one integer N(1 < n < 1000000000). Process to end of file.
  *    Output
- *    For each pair of input integers a and b you should output the sum of a and b, and followed by a blank line. 
- *
+ *    For each case, output the last four dights of S(N) in one line.
  *    Sample Input
- *    1 5
- *    10 20
- *
+ *    1
+ *    2
  *    Sample Output
- *    6
- *
- *    30
- *    
+ *    0001
+ *    0009
  *
  *        Version:  1.0
- *        Created:  03/31/2014 22:55:40
+ *        Created:  04/14/2014 16:12:30
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -35,8 +30,7 @@
 
 #include <stdio.h>
 int main(){
-	int a,b;
-	while(scanf("%d%d",&a,&b)!=EOF)
-		printf("%d\n\n",a+b);
-	return 0;
-}
+	long n;
+	long double s;
+	while(scanf("%d",&n):q
+			)
