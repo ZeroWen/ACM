@@ -53,9 +53,13 @@ int main(){
 			}
 		}
 		if(sign)
-			printf("%s",str);
+			printf("%s\n",str);
 		for(i=0;i<61;i++)
 			str[i]='\0';
 	}
 	return 0;
 }
+
+/*
+ * 思路就是查找每个字母在字符串中的个数，如果大于1，则不输出
+ */
