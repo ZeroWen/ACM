@@ -52,8 +52,7 @@ int main(){
 					t[i]-=10;
 				}
 			}
-			j++;
-			printf("Case %d:\n",j);
+			printf("Case %d:\n",++j);
 			printf("%s + %s = ",a,n);    
 			if(c==1)
 				printf("%d",c);
