@@ -30,11 +30,10 @@
  */
 
 #include <stdio.h>
-int main()
-{
-    int n,c;
-    for(;scanf("%1d",&n),n;printf("%d\n",--n%9u+1))
-        while((c=getchar())-48u<10)
-            n+=c-48;
-    return 0;
+int main(){
+	int n,c;
+	for(;scanf("%1d",&n),n;printf("%d\n",--n%9u+1))
+		while((c=getchar())-48u<10)
+			n+=c-48;
+	return 0;
 }
