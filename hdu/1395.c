@@ -29,26 +29,22 @@
  * =====================================================================================
  */
 
-#include <stdio.h>
+#include<stdio.h>
 int main(){
-	long n,x,a;
-	int flag;
+	int n,i,s;
 	while(scanf("%d",&n)!=EOF){
-		flag=0;
-		if(n%2==0)
-			flag=0;
-		else
-			for(x=1,a=2;x<n;x++)
-				if(a%n==1){
-					flag=1;
-					break;
-				}
-				else
-					a*=2;
-		if(flag)
-			printf("2^%d mod %d = 1\n",x,n);
-		else
+		if(n%2==0||n==1){
 			printf("2^? mod %d = 1\n",n);
+			continue;
+		}
+		for(i=1,s=2;;i++){
+			s*=2;
+			if(s==n+1)
+				break;
+			if(s>=n)
+				s%=n;
+		}
+		printf("2^%d mod %d = 1\n",i+1,n);
 	}
 	return 0;
 }
