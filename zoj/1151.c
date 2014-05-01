@@ -33,11 +33,30 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 int main(){
-	int n;
-	while(scanf("%d",&n)!=EOF)
-		while(n--){
-			scanf("%d")
-			;
+	int m,n,i,j;
+	char s[200],w[100];
+	while(scanf("%d",&m)!=EOF){
+		while(m--){
+			scanf("%d",&n);
+			getchar();
+			while(n--){
+				gets(s);
+				for(i=0;i<strlen(s);i++){
+					for(j=0;s[i]!=' '&&s[i]!='\0';)
+						w[j++]=s[i++];
+					if(j)
+						for(j--;j>=0;j--)
+							putchar(w[j]);
+					if(s[i]==' ')
+						putchar(' ');
+				}
+				putchar('\n');
+			}
+			if(m)
+				putchar('\n');
 		}
+	}
+	return 0;
 }
