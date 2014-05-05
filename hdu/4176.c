@@ -48,8 +48,8 @@ int main(){
 						min=m[i];
 				}
 			}
-			for(i=0;i<n-1;i++)
-				for(j=n;j>i;j--)
+			for(i=0;i<n;i++)
+				for(j=n-1;j>i;j--)
 					if(m[j]>m[j-1]){
 						t=m[j];
 						m[j]=m[j-1];
