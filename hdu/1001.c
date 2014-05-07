@@ -20,11 +20,8 @@
  *    Sample Output
  *    1
  *    5050
- *    
  *
- *        Version:  1.0
  *        Created:  03/30/2014 21:21:34
- *       Revision:  none
  *       Compiler:  gcc
  *
  *         Author:  Jackie Kuo (http://jackiekuo.com), j.kuo2012@gmail.com
@@ -34,7 +31,7 @@
 
 #include <stdio.h>
 int main(){
-	int n;
+	nt n;
 	while(scanf("%d",&n)!=EOF){
 		int i,sum=0;
 		for(i=1;i<=n;i++)
