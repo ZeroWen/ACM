@@ -29,32 +29,27 @@
 
 #include <stdio.h>
 int main(){
-	long a,b,au,bu;
-	int j,sign;
+	unsigned long a,b;
+	int i,sign;
 	while(1){
-		scanf("%ld%ld",&a,&b);
-		if(a==0&&b==0)
+		scanf("%lu%lu",&a,&b);
+		if(!a&&!b)
 			break;
-		sign=j=0;
-		while(a&&b){
-			au=a%10;
-			bu=b%10;
-			if(au+bu+sign>9){
-				j++;
+		for(sign=i=0;a||b;i+=sign,a/=10,b/=10)
+			if(a%10+b%10+sign>9)
 				sign=1;
-			}
-			else{
+			else
 				sign=0;
-			}
-			a/=10;
-			b/=10;
-		}
-		if(sign&&(a%10==9||b%10==9))
-			j++;
-		if(j)
-			printf("%d carry operations.\n",j);
-		else
+		if(!i)
 			printf("No carry operation.\n");
+		else if(i==1)
+			printf("%d carry operation.\n",i);
+		else
+			printf("%d carry operations.\n",i);
 	}
 	return 0;
 }
+
+/*
+ * 1的时候要输出operation!!!!!
+ */
