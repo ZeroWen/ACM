@@ -31,18 +31,18 @@
 #include <stdio.h>
 int main(){
 	int t;
-	double angel,h,m,s;
+	double angle,h,m,s;
 	scanf("%d",&t);
 	while(t--){
 		scanf("%lf%lf%lf",&h,&m,&s);
 		if(h>12)
 			h-=12;
-		angel=h*30-11*m/2-11*s/120;
-		if(angel<0)
-			angel=-angel;
-		if(angel>180)
-			angel=360-angel;
-		printf("%d\n",(int)angel);
+		angle=h*30-11*m/2-11*s/120;
+		if(angle<0)
+			angle=-angle;
+		if(angle>180)
+			angle=360-angle;
+		printf("%d\n",(int)angle);
 	}
 	return 0;
 }
