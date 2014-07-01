@@ -22,10 +22,10 @@
  *    Hint
  *    The results will not exceed int type.
  *
- *        Created:  04/17/2014 16:12:23
- *       Compiler:  gcc
+ *    Created:  04/17/2014 16:12:23
+ *    Compiler:  gcc
  *
- *         Author:  Jackie Kuo (http://jackiekuo.com), j.kuo2012@gmail.com
+ *   Author:  Jackie Kuo (http://jackiekuo.com), j.kuo2012@gmail.com
  *
  * =====================================================================================
  */
