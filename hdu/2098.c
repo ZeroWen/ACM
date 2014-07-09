@@ -18,41 +18,33 @@
  *    3
  *    2
  *
- *        Created:  05/04/2014 00:30:48
- *       Compiler:  gcc
+ *    Created:  07/09/14 20:20:12
+ *    Compiler:  gcc
  *
- *         Author:  Jackie Kuo (http://jackiekuo.com), j.kuo2012@gmail.com
+ *    Author:  Jackie Kuo (http://jackiekuo.com), j.kuo2012@gmail.com
  *
  * =====================================================================================
  */
 
 #include <stdio.h>
+#include <math.h>
 int main(){
-	int n,c;
-	//while(scanf("%d",&n),n){
-	//	printf("%d\n",c);
-	//}
-	for(n=2;n<=5000;n++){
-		for(c=2;c<n;c++)
-			if(n%c==0)
+	int n,i,j,k,x,tmp,a[1500]={2,3,5,7};
+	for(i=4,j=11;j<10000;j++){
+		tmp=sqrt(j);
+		for(k=2;k<tmp+1;k++)
+			if(j%k==0)
 				break;
-		if(c==n)
-			printf("%d ",c);
+		if(k==tmp+1)
+			a[i++]=j;
+	}
+	while(scanf("%d",&n),n){
+		for(x=i=0;a[i]<n/2;i++){
+			for(j=i+1;a[j]<n-a[i];j++);
+			if(a[j]==n-a[i])
+				++x;
+		}
+		printf("%d\n",x);
 	}
 	return 0;
 }
-
-/*
- * 2 3 5 7 11 13 17 19 23 29
- * 4 2+2
- * 6 3+3
- * 8 3+5
- * 10 3+7 5+5
- * 12 5+7
- * 14 7+7 3+11
- * 16 3+13 5+11
- * 18 5+13 7+11
- * 20 3+17 7+13
- * 22 3+19 5+17 11+11
- * 24 5+19 7+17 11+13
- */
