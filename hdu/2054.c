@@ -31,25 +31,22 @@
 
 #include <stdio.h>
 #include <string.h>
+#define foo(foo); \
+	for(i=dot=0,len=strlen(foo);i<len&&!dot;++i) \
+		dot=(foo[i]=='.'); \
+	if(dot){ \
+		for(i=len-1;foo[i]=='0';--i); \
+		i-=(foo[i]=='.'); \
+		foo[i+1]='\0'; \
+	} 
+
 int main(){
-	int i,sign;
-	char a[100000],b[100000],c;
-	while(1){
-		i=0;
-		while((c=getchar())!=' ')
-			a[i++]=c;
-		a[i]='\0';
-		i=0;
-		while((c=getchar())!='\n')
-			b[i++]=c;
-		b[i]='\0';
-		if(strlen(a)!=strlen(b))
-			sign=1;
-		else
-			for(i=sign=0;a[i]!='\0'&&!sign;i++)
-				if(a[i]!=b[i])
-					sign=1;
-		printf("%s\n",sign?"NO":"YES");
-	}
-	return 0;
+    int i,dot,len;
+    char a[100000],b[100000];
+    while(scanf("%s%s",a,b)!=EOF){
+		foo(a);
+		foo(b);
+        printf("%s\n",strcmp(a,b)?"NO":"YES");
+    }
+    return 0;
 }
