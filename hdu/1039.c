@@ -47,36 +47,39 @@
 #include <stdio.h>
 #include <string.h>
 int isvowel(char c){
-	int flag;
-	switch(c){
-		case 'a':
-		case 'e':
-		case 'i':
-		case 'o':
-		case 'u':flag=1;break;
-		default:flag=0;
-	}
-	return flag;
+    char *s="aeiou";
+    int i;
+    for(i=0;i<5;i++)
+         if(c==s[i])
+               return 1;
+    return 0;
+}
+int iscon(char a,char b,char c){
+    int r;
+    r=isvowel(a)+isvowel(b)+isvowel(c);
+    if(r==0||r==3)
+        return 1;
+    return 0;
 }
 int main(){
-	char a[21];
-	int i,vowel,three,two;
-	while(scanf("%s",a)!=EOF){
-		if(!strcmp(a,"end"))
-			break;
-		vowel=three=two=0;
-		for(i=0;a[i]!='\0';i++){
-			if(isvowel(a[i])){
-				vowel=1;
-				if((i+2)<strlen(a)&&isvowel(a[i+1])&&isvowel(a[i+2]))
-					three=1;
-			}
-			else if((i+2)<strlen(a)&&!isvowel(a[i+1])&&!isvowel(a[i+2]))
-				three=1;
-			if(a[i]!='e'&&a[i]!='o'&&a[i+1]!='\0'&&a[i+1]==a[i])
-				two=1;
-		}
-		printf("<%s> is %sacceptable.\n",a,(vowel&&!three&&!two)?"":"not ");
-	}
-	return 0;
+    int n,i,j,len,flag,hasvowel,hascon,same;
+    char w[21];
+    while(scanf("%s",&w)!=EOF){
+        if(strcmp(w,"end")==0)
+            break;
+        flag=hasvowel=same=hascon=0;
+        len=strlen(w);
+        for(i=0;i<len;i++){
+            if(isvowel(w[i]))
+                 hasvowel=1;
+            if(i>0&&w[i]==w[i-1]&&w[i]!='e'&&w[i]!='o')
+                 same=1;
+            if(i>1&&iscon(w[i],w[i-1],w[i-2]))
+                 hascon=1;
+        }
+        if(hasvowel&&!hascon&&!same)
+             flag=1;
+        printf("<%s> is %sacceptable.\n",w,flag?"":"not ");
+    }
+    return 0;
 }
