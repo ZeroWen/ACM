@@ -37,19 +37,22 @@
  */
 
 #include <stdio.h>
+#include <math.h>
 int main(){
-	int i=0,n,j,sign;
-	while(scanf("%d",&n)!=EOF){
-		if(n<=0)
-			break;
-		sign=1;
-		if(n<3)
-			sign--;
-		for(j=2;j<n;j++)
-			if(n%j==0)
-				sign--;
-		i++;
-		printf("%d: %s\n",i,sign?"yes":"no");
-	}
-	return 0;
+    int i=0,n,j,sign;
+    while(scanf("%d",&n)!=EOF){
+        if(n<=0)
+            break;
+        sign=1;
+        if(n<3)
+            sign=0;
+        for(j=2;j<=sqrt(n);j++)
+            if(n%j==0){
+                sign=0;
+                break;
+            }
+        ++i;
+        printf("%d: %s\n",i,sign?"yes":"no");
+    }
+    return 0;
 }
