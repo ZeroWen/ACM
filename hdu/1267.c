@@ -13,7 +13,8 @@
  *    1 1
  *    3 1
  *    Sample Output
- *    1 3
+ *    1
+ *    3
  *
  *        Created:  02/23/2015 16:19:54
  *       Compiler:  gcc
