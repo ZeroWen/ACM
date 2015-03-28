@@ -34,7 +34,7 @@ int main(){
 	while(scanf("%ld%ld",&n,&k)!=EOF){
 		if(n==0&&k==0)
 			break;
-		;
-		printf();
+		printf("%s\n",(n-1)%(k+1)?"Tang":"Jiang");
 	}
+	return 0;
 }
