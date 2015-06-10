@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  2206.c
+ *       Filename:  2206.java
  *
  *    Description:  
  *    Problem Description
@@ -16,49 +16,27 @@
  *    Sample Output
  *    YES
  *
- *     Created:  07/02/2014 00:02:23
- *     Compiler:  gcc
+ *     Created:  06/10/2015 19:40:23
  *
  *     Author:  Jackie Kuo (http://jackiekuo.com), j.kuo2012@gmail.com
  *
  * =====================================================================================
  */
 
-#include <stdio.h>
-int chartype(char c){
-		if(c=='.')
-				return 0;//dot
-		else if(c<'0'||c>'9')
-				return 1;//others
-		else
-				return 2;//number
-}
-int main(){
-		char str[102];
-		int i,flag,sign,tmp,dot,dig,type;
-		while(gets(str)){	
-				for(i=tmp=dot=dig=0,flag=1;str[i]!='\0';i++){
-						type=chartype(str[i]);
-						if(type==1){
-								flag=0;
-								break;
-						}
-						if(type==0){
-								if(tmp>255||dig>3){
-										flag=0;
-										break;
-								}
-								sign=tmp=dig=0;
-								++dot;
-						}
-						else{
-								tmp=tmp*10+str[i]-'0';
-								++dig;
-						}
-				}
-				if(tmp>255||dig>3||dot!=3||chartype(str[0])!=2||chartype(str[i-1])!=2)
-						flag=0;
-				printf("%s\n",flag?"YES":"NO");
+import java.util.Scanner;
+
+class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		while (sc.hasNext()) {
+			boolean flag = true;
+			int dot1=-1,dot2;
+			String str = sc.nextLine();
+			if(str.matches("((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)")){
+				System.out.println("YES");
+			} else {
+				System.out.println("NO");
+			}
 		}
-		return 0;
+	}
 }
